@@ -87,9 +87,14 @@ AUTOTHROTTLE_DEBUG = True
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
-POSTGRES_DB = 'infocenter'
-POSTGRES_USER = 'Simon'
-POSTGRES_PW = 'ximen120'
-POSTGRES_SERVER = '10.10.50.170'
-POSTGRES_PORT = 5432
+# POSTGRES_DB = 'infocenter'
+# POSTGRES_USER = 'Simon'
+# POSTGRES_PW = 'ximen120'
+# POSTGRES_SERVER = '10.10.50.170'
+# POSTGRES_PORT = 5432
+
+ARANGODB_HOST = 'http://192.168.1.9:8529'
+ARANGODB_DB = 'DataSearch'
+USER = 'simon'
+PASSWD = 'ximen120'
 LOG_LEVEL = 'INFO'
