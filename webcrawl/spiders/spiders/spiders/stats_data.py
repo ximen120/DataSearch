@@ -6,7 +6,7 @@ from spiders.items import dir_item, data_item, meta_item, reg_item
 class StatsDataSpider(scrapy.Spider):
     name = 'stats_data'
     allowed_domains = ['data.stats.gov.cn']
-    start_urls = ['http://data.stats.gov.cn/']
+    start_urls = ['https://data.stats.gov.cn/']
 
     def parse(self, response):
         """
@@ -30,7 +30,7 @@ class StatsDataSpider(scrapy.Spider):
             'gjydsc': '国际市场月度商品价格',
             'gjnd': '主要国家（地区）年度数据',
         }
-        url_zb = 'http://data.stats.gov.cn/easyquery.htm'
+        url_zb = 'https://data.stats.gov.cn/easyquery.htm'
         form_data = {'id': 'zb', 'dbcode': 'dbname', 'wdcode': 'zb', 'm': 'getTree'}
         for db in dbcode.keys():
             form_data['dbcode'] = db
@@ -66,7 +66,7 @@ class StatsDataSpider(scrapy.Spider):
                     doc[key] = str(zb_dir[key])
             doc['datasource'] = '国家统计局'
             if doc['isparent']:
-                url_zb_t = str('http://data.stats.gov.cn/easyquery.htm')
+                url_zb_t = str('https://data.stats.gov.cn/easyquery.htm')
                 form_data = dict({'id': 'zb', 'dbcode': 'dbname', 'wdcode': 'zb', 'm': 'getTree'})
                 form_data['id'] = doc['id']
                 form_data['dbcode'] = doc['dbcode']
@@ -75,14 +75,14 @@ class StatsDataSpider(scrapy.Spider):
             else:
                 if doc['dbcode'] in ['hgyd', 'hgjd', 'hgnd']:
                     regcode = '000000'
-                    url1 = 'http://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode='
+                    url1 = 'https://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode='
                     url2 = str(doc['dbcode']) + '&rowcode=zb&colcode=sj&wds=[]&dfwds=[{"wdcode":"zb","valuecode":"'
                     url3 = str(doc['id']) + '"},{"wdcode":"sj","valuecode":"1900-"}]'
                     url_data = url1 + url2 + url3
                     yield response.follow(url=url_data, callback=self.data_parse, meta={'regcode': regcode,
                                                                             'dbcode': doc['dbcode'], 'pid': doc['id']})
                 else:
-                    url4 = 'http://data.stats.gov.cn/easyquery.htm?m=getOtherWds&dbcode='
+                    url4 = 'https://data.stats.gov.cn/easyquery.htm?m=getOtherWds&dbcode='
                     url5 = str(doc['dbcode']) + '&rowcode=zb&colcode=sj&wds=[]&dfwds: [{"wdcode":"zb","valuecode":"' \
                            + str(doc['id']) +'"]'
                     url_reg = url4 + url5
@@ -101,7 +101,7 @@ class StatsDataSpider(scrapy.Spider):
                     regmeta['code'] = reg['code']
                     regmeta['name'] = reg['name']
                     yield regmeta
-                    url6 = 'http://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode='
+                    url6 = 'https://data.stats.gov.cn/easyquery.htm?m=QueryData&dbcode='
                     url7 = str(dbcode) + '&rowcode=zb&colcode=sj&wds=[{"wdcode":"reg","valuecode":"' + str(reg['code'])
                     url8 = '"}]&dfwds=[{"wdcode":"zb","valuecode":"' + str(zbcode)
                     url9 = '"},{"wdcode":"sj","valuecode":"1900-"}]'

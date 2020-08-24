@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ebc6143d-77bc-4bac-a98a-ec2a6a4faa89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/webcrawl/spiders/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+    <list default="true" id="29925154-9b2f-431f-b2cc-76cd86366e63" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/webcrawl/spiders/spiders/pipelines4postgresql.py.bak" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webcrawl/spiders/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webcrawl/spiders/.idea/spiders.iml" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/.idea/spiders.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/webcrawl/spiders/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webcrawl/spiders/spiders/middlewares.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/spiders/middlewares.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webcrawl/spiders/spiders/pipelines.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/spiders/pipelines.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webcrawl/spiders/spiders/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/spiders/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webcrawl/spiders/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/webcrawl/spiders/spiders/spiders/stats_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/webcrawl/spiders/spiders/spiders/stats_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +20,9 @@
   </component>
   <component name="JupyterTrust" id="62f1edf5-a9b9-4bfc-91d6-5945f81aa13a" />
   <component name="ProjectId" id="1gE5dl4q9bLl6iiDZqcq56SXX4I" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -28,13 +30,28 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/webcrawl/spiders" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="ebc6143d-77bc-4bac-a98a-ec2a6a4faa89" name="Default Changelist" comment="" />
@@ -52,14 +69,16 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1597843379999">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="211" key="FileChooserDialogImpl" timestamp="1598250559240">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1597843379999" />
-    <state x="270" y="57" key="SettingsEditor" timestamp="1597670816321">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="686" y="211" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1598250559240" />
+    <state x="338" y="72" key="SettingsEditor" timestamp="1598250506280">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="270" y="57" key="SettingsEditor/0.0.1536.824/1920.0.1920.1040@0.0.1536.824" timestamp="1597670816321" />
+    <state x="338" y="72" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1598250506280" />
     <state x="468" y="10" width="600" height="804" key="find.popup" timestamp="1597671178496">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
